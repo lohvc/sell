@@ -8,6 +8,7 @@ spring:
     show-sql: true
   jackson:
     default-property-inclusion: non_null
+
 server:
   context-path: /sell
 
@@ -19,3 +20,9 @@ logging:
   file:  D:\hello\sell.log
   level:
     com.imooc.sell.service.LoggerTest: debug
+
+
+
+wechat:
+  mpAppId: wx69934a7f0d1dab12
+  mpAppSecret: 723b060e07154463523ed9ef5500ea18
