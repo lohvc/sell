@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Transactional
 public class CategoryServiceImplTest {
 
     @Autowired
@@ -39,7 +41,7 @@ public class CategoryServiceImplTest {
 
     @Test
     public void save() {
-        ProductCategory productCategory=new ProductCategory("男生专享",3);
+        ProductCategory productCategory=new ProductCategory("男生专享",9);
         ProductCategory result = categoryService.save(productCategory);
         Assert.assertNotNull(result);
 

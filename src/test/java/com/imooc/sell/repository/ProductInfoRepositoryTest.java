@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -15,6 +16,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Transactional
 public class ProductInfoRepositoryTest {
 
     @Autowired
@@ -39,7 +41,7 @@ public class ProductInfoRepositoryTest {
     //@Test
 
     @Test
-    public void findByProductStatus() throws Exception{
+    public void findByProductStatus() {
         List<ProductInfo> productInfoList=repository.findByProductStatus(0);
         Assert.assertNotEquals(0,productInfoList.size());
     }

@@ -7,28 +7,30 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
+
 import java.util.Arrays;
 import java.util.List;
 
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Transactional
 public class ProductCategoryRepositoryTest {
     @Autowired
     private ProductCategoryRepository repository;
 
     @Test
     public void findOneTest(){
-        ProductCategory productCategory = (ProductCategory) repository.findOne(1);
+        ProductCategory productCategory =  repository.findOne(1);
         System.out.println(productCategory.toString());
     }
 
     @Test
-    @Transactional
+
     public void saveTest(){
-        ProductCategory productCategory=new ProductCategory("女生最爱",4);
+        ProductCategory productCategory=new ProductCategory("篮球",7);
 //        ProductCategory productCategory = repository.findOne(2);
 //        productCategory.setCategoryId(2);
 //        productCategory.setCategoryName("男生最爱");

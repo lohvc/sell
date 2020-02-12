@@ -2,6 +2,7 @@ package com.imooc.sell.dataObject;
 
 import com.imooc.sell.enums.OrderStatusEnum;
 import com.imooc.sell.enums.PayStatusEnum;
+import com.sun.xml.internal.bind.v2.TODO;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.core.annotation.Order;
@@ -47,11 +48,11 @@ public class OrderMaster {
 
     /*支付状态，默认未支付*/
     private Integer payStatus = PayStatusEnum.WAIT.getCode();
-//TODO
-//    /*创建时间*/
-//    private Date createTime;
-//
-//    /*更新时间*/
-//    private Date updateTime;
+
+    /*创建时间*/
+    private Date createTime;
+
+    /*更新时间*/
+    private Date updateTime;
 
 }
