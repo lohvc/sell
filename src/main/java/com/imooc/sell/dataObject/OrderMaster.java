@@ -2,13 +2,13 @@ package com.imooc.sell.dataObject;
 
 import com.imooc.sell.enums.OrderStatusEnum;
 import com.imooc.sell.enums.PayStatusEnum;
-import com.sun.xml.internal.bind.v2.TODO;
+
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
-import org.springframework.core.annotation.Order;
+
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+
 import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
