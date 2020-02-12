@@ -2,8 +2,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 123456
-    url: jdbc:mysql://192.168.2.153/sell?characterEncoding=utf-8&useSSL=false
+    password: lwc19970820
+    url: jdbc:mysql://101.133.170.240/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
   jackson:
@@ -22,7 +22,7 @@ logging:
     com.imooc.sell.service.LoggerTest: debug
 
 
-
-wechat:
-  mpAppId: wx69934a7f0d1dab12
-  mpAppSecret: 723b060e07154463523ed9ef5500ea18
+#
+#wechat:
+#  mpAppId: wx69934a7f0d1dab12
+#  mpAppSecret: 723b060e07154463523ed9ef5500ea18
