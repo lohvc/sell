@@ -52,7 +52,7 @@ public class ProductServiceImplTest {
         ProductInfo productInfo=new ProductInfo();
         productInfo.setProductId("123457");
         productInfo.setProductName("皮皮虾");
-        productInfo.setProductPrice(new BigDecimal(3.2));
+        productInfo.setProductPrice(new BigDecimal("3.2"));
         productInfo.setProductStock(100);
         productInfo.setProductDescription("好吃");
         productInfo.setProductIcon("http://xxxxx.jpg");

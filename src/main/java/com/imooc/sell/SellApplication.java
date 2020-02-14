@@ -12,8 +12,8 @@ public class SellApplication extends SpringBootServletInitializer {
         SpringApplication.run(SellApplication.class, args);
     }
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder springApplicationBuilder){
-        return super.configure(springApplicationBuilder);
-    }
+//    @Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder springApplicationBuilder){
+//        return super.configure(springApplicationBuilder);
+//    }
 }

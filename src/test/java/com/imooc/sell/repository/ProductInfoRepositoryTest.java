@@ -27,7 +27,7 @@ public class ProductInfoRepositoryTest {
         ProductInfo productInfo=new ProductInfo();
         productInfo.setProductId("123456");
         productInfo.setProductName("皮蛋粥");
-        productInfo.setProductPrice(new BigDecimal(5.2));
+        productInfo.setProductPrice(new BigDecimal("5.2"));
         productInfo.setProductStock(100);
         productInfo.setProductDescription("好喝");
         productInfo.setProductIcon("http://xxx.jpg");

@@ -20,14 +20,12 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -115,8 +113,14 @@ public class OrderServiceImpl implements OrderService {
     public Page<OrderDTO> findList(String buyerOpenid, Pageable pageable) {
         Page<OrderMaster> orderMasterList = orderMasterRepository.findByBuyerOpenid(buyerOpenid, pageable);
         List<OrderDTO> orderDTOList = OrderMaster2OrderDTOConvert.convert(orderMasterList.getContent());
-        Page<OrderDTO> orderDTOPage=new PageImpl<OrderDTO>(orderDTOList,pageable,orderMasterList.getTotalElements());
-        return orderDTOPage;
+        return new PageImpl<>(orderDTOList,pageable,orderMasterList.getTotalElements());
+
+    }
+
+    @Override
+    public Page<OrderDTO> findList(Pageable pageable) {
+        
+        return null;
     }
 
     @Override
