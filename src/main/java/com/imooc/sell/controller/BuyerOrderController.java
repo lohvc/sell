@@ -19,7 +19,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.xml.transform.Result;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,7 +46,7 @@ public class BuyerOrderController {
                                                BindingResult bindingResult){
         if (bindingResult.hasErrors()){
             log.error("【创建订单】参数不正确，orderForm={}",orderForm);
-            throw new SellException(ResultEnum.param_error.getCode(),
+            throw new SellException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
         OrderDTO orderDTO= OrderForm2OrderDTOConvert.convert(orderForm);
@@ -71,7 +70,7 @@ public class BuyerOrderController {
                                          @RequestParam(value = "size",defaultValue = "10") Integer size){
         if (StringUtils.isEmpty(openid)){
             log.error("【查询订单列表】openid为空");
-            throw new SellException(ResultEnum.param_error);
+            throw new SellException(ResultEnum.PARAM_ERROR);
         }
         PageRequest pageRequest=new PageRequest(page,size);
         Page<OrderDTO> list = orderService.findList(openid, pageRequest);

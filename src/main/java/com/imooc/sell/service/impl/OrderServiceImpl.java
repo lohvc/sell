@@ -113,7 +113,7 @@ public class OrderServiceImpl implements OrderService {
     public Page<OrderDTO> findList(String buyerOpenid, Pageable pageable) {
         Page<OrderMaster> orderMasterList = orderMasterRepository.findByBuyerOpenid(buyerOpenid, pageable);
         List<OrderDTO> orderDTOList = OrderMaster2OrderDTOConvert.convert(orderMasterList.getContent());
-        return new PageImpl<OrderDTO>(orderDTOList,pageable,orderMasterList.getTotalElements());
+        return new PageImpl<>(orderDTOList,pageable,orderMasterList.getTotalElements());
 
     }
 
@@ -121,7 +121,7 @@ public class OrderServiceImpl implements OrderService {
     public Page<OrderDTO> findList(Pageable pageable) {
         Page<OrderMaster> orderMasters = orderMasterRepository.findAll(pageable);
         List<OrderDTO> orderDTOList = OrderMaster2OrderDTOConvert.convert(orderMasters.getContent());
-        return new PageImpl<OrderDTO>(orderDTOList,pageable,orderMasters.getTotalElements());
+        return new PageImpl<>(orderDTOList,pageable,orderMasters.getTotalElements());
     }
 
     @Override
@@ -151,10 +151,10 @@ public class OrderServiceImpl implements OrderService {
                 .collect(Collectors.toList());
         productService.increaseStock(cartDTOList);
         //如果已经支付，需要退款
-        if (orderDTO.getPayStatus().equals(PayStatusEnum.SUCCESS.getCode())){
-            //TODO
-
-        }
+//        if (orderDTO.getPayStatus().equals(PayStatusEnum.SUCCESS.getCode())){
+//            //TODO
+//
+//        }
         return orderDTO;
     }
 

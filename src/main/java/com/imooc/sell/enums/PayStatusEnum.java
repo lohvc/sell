@@ -18,13 +18,5 @@ public enum PayStatusEnum implements CodeEnum{
         this.message = message;
     }
 
-    public static PayStatusEnum getPayStatusEnum(Integer code){
-        for (PayStatusEnum payStatusEnum:
-                PayStatusEnum.values()){
-            if (payStatusEnum.getCode().equals(code)){
-                return payStatusEnum;
-            }
-        }
-        return null;
-    }
+
 }
