@@ -24,13 +24,13 @@ public class LoggerTest {
 
     //private final Logger logger= LoggerFactory.getLogger(LoggerTest.class);
 
-    @Test
-    public void test1(){
-        String name="imooc";
-        String password="123456";
-        log.debug("debug---");
-        log.info("name:"+name+"  password:"+password);
-        log.info("name:{},password:{}",name,password);
-        log.error("error---");
-    }
+//    @Test
+//    public void test1(){
+//        String name="imooc";
+//        String password="123456";
+//        log.debug("debug---");
+//        log.info("name:"+name+"  password:"+password);
+//        log.info("name:{},password:{}",name,password);
+//        log.error("error---");
+//    }
 }
