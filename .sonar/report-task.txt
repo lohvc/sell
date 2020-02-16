@@ -1,6 +1,6 @@
-projectKey=my:project1
+projectKey=sell
 serverUrl=http://localhost:9000
 serverVersion=7.0.0.36138
-dashboardUrl=http://localhost:9000/dashboard/index/my:project1
-ceTaskId=AXBMoWZu3HsZfGYovv6_
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXBMoWZu3HsZfGYovv6_
+dashboardUrl=http://localhost:9000/dashboard/index/sell
+ceTaskId=AXBMqKHV3HsZfGYovv7H
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXBMqKHV3HsZfGYovv7H
